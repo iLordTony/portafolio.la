@@ -1,135 +1,155 @@
 @import "normalize.styl"
+@import "fonts.styl"
 @import "nib"
+
 a
-  text-decoration none
+   text-decoration none
 
 body
-  font-family 'Roboto', sans-serif
-  font-size 16px
+   font-family 'Roboto', sans-serif
+   font-size 16px
 
 .Footer
-  background-image url('../images/bg2.jpg')
-  background-repeat no-repeat
-  background-position center
-  background-size cover
-  padding 2em 0
-  text-align center
+   background-image url('../images/bg2.jpg')
+   background-repeat no-repeat
+   background-position center
+   background-size cover
+   padding 2em 0
+   text-align center
 
 .Footer-form
-  text-align center
-  display inline-block
+   text-align center
+   display inline-block
 
 .Footer-left
-  display inline-block
-  max-width 30em
-  text-align center
-  vertical-align top
+   display inline-block
+   max-width 30em
+   text-align center
+   vertical-align top
 
 .Footer-title
-  color white
+   color white
 
 .Footer-formInput,
-.Footer-textarea
-  background white
-  border none
-  display block
-  border-radius 2em
-  padding .5em
-  margin 0 auto 1em
+.Footer-textArea
+   background white
+   border none
+   display block
+   border-radius 2em
+   padding .5em 1em
+   margin 0 auto 1em
+   &:focus
+      outline none
 
-.Footer-textarea
-  resize none
+.Footer-textArea
+   resize none
 
 .Footer-button
-  background orange
-  border-radius 1em
-  border none
-  color white
-  padding .5em 1em
+   background orange
+   border-radius 1em
+   border none
+   color white
+   padding .5em 1em
 
 .Header
-  margin-top 3.75em
-  background-image url('../images/portada.jpg')
-  background-repeat no-repeat
-  background-position center
-  background-size cover
-  text-align center
-  padding 1.2em 0
+   margin-top 3.75em
+   background-image url('../images/portada.jpg')
+   background-repeat no-repeat
+   background-position center
+   background-size cover
+   text-align center
+   padding 1.2em 0
 
 .Header-image
-  border-radius 50%
-  border 5px solid white
+   border-radius 50%
+   border 5px solid white
 
 .Header-name, .Header-link
-  color white
+   color white
 
 .Header-link
-  font-size 2.2em
-  font-weight bold
+   font-size 2.2em
+   font-weight bold
 
 .Header-name
-  font-size 1.5em
-  font-weight 200
-  margin 0
+   font-size 1.5em
+   font-weight 200
+   margin 0
 
 .MainMenu
-  background #1E1E1E
-  height 3.75em
-  width 100%
-  text-align center
-  position fixed
-  top 0
+   background #1E1E1E
+   height 3.75em
+   width 100%
+   text-align center
+   position fixed
+   top 0
 
 .MainMenu-item
-  display inline-block
+   display inline-block
 
 .MainMenu-link
-  color #00DBFF
-  line-height 3.75em
-  margin 0 0.5em
-  &:hover
-    color #fff
+   color #00DBFF
+   line-height 3.75em
+   margin 0 0.5em
+   &:hover
+      color #fff
 
 .MainMenu-list
-  margin 0
-  padding 0
+   margin 0
+   padding 0
 
 .Profile
-  text-align center
+   text-align center
+   padding 0 1em
 
 .Profile-link
-  color white
-  display inline-block
-  padding 0.5em 1em
-  border-radius 2em
-  margin 0.5em 0.5em
-
-.Profile-linkFacebook
-  background #3A5795
-
-.Profile-linkTwitter
-  background #55acee
-
-.Profile-linkGithub
-  background orange
+   color white
+   display inline-block
+   padding 0.5em 1em
+   border-radius 2em
+   margin 0.5em 0.5em
+   &.facebook
+      background #4862A3
+   &.twitter
+      background #55acee
+   &.github
+      background #829AAB
 
 .u-title
-  color #00CCFF
-  border-bottom 1px dashed #00CCFF
-  font-size 1.5em
-  font-weight normal
+   color #00CCFF
+   border-bottom 1px dashed #00CCFF
+   font-size 1.5em
+   font-weight normal
 
 .Work
-  text-align center
+   text-align center
+   &-container
+      display flex
+      flex-wrap wrap
+      justify-content space-around
 
 .Work-imageDescription
-  color #515151
-  font-style italic
+   color #515151
+   font-style italic
 
 .Work-imageContainer
-  margin 0
+   margin 0
 
 .Work-item
-  display inline-block
-  margin 1em 0.5em
+   display inline-block
+   margin-bottom 1.5em
 
+//desktop-first
+@media screen and (max-width: 480px)
+   .Profile
+      &-link
+         display block
+
+@media screen and (max-width: 767px)
+   .Footer
+      &-form
+         display block
+      &-formInput
+         width 90%
+      &-textArea
+         width 90%
