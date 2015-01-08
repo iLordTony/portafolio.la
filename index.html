@@ -43,6 +43,15 @@
 			<a href="http://twitter.com/iLordTony" target="_blank" class="Profile-link twitter"><span class="icon-icon-twitter"> </span>@iLordTony</a>
 			<a href="http://github.com/iLordTony" target="_blank" class="Profile-link github"><span class="icon-icon-git"> </span>Carlos Tonatihu</a>
 		</section>
+      <section class="slider">
+         <div class="slider-container">
+            <ul class="rslides">
+               <li><img src="static/images/imagen1.jpg" width="650" height="400" alt="" /></li>
+               <li><img src="static/images/imagen2.jpg" width="650" height="400" alt="" /></li>
+               <li><img src="static/images/imagen3.jpg" width="650" height="400" alt="" /></li>
+            </ul>
+         </div>
+      </section>
 		<section  id="trabajo" class="Work">
 			<h2 class="Work-title u-title">Mis trabajos</h2>
 			<div class="Work-container">         
@@ -139,6 +148,13 @@
                 <textarea class="Footer-textArea" placeholder="Motivo"></textarea>
                 <button type="submit" class="Footer-button"> Contactarme </button>
             </form>
-        </footer>	
+      </footer>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+      <script src="static/js/responsiveslides.min.js"></script>
+      <script type="text/javascript">
+         $(function() {
+            $(".rslides").responsiveSlides();
+         });
+      </script>
 	</body>
 </html>
