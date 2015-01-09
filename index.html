@@ -12,7 +12,9 @@
 	</head>
 	<body>
 		<header id="perfil" class="Header">
-			<nav class="MainMenu">
+         <button class="Header-button icon-menu is-active" id="show"></button>
+         <button class="Header-button icon-menu" id="hide"></button>
+			<nav class="MainMenu" id="MainMenu">
 				<ul class="MainMenu-list">
 					<li class="MainMenu-item">
 						<a href="#perfil" class="MainMenu-link">Yo</a>
@@ -151,9 +153,36 @@
       </footer>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
       <script src="static/js/responsiveslides.min.js"></script>
+      <script src="static/js/Hammer.min.js"></script>
       <script type="text/javascript">
          $(function() {
             $(".rslides").responsiveSlides();
+            if (window.matchMedia('(max-width: 768px)').matches){
+               var $buttonShow = document.getElementById('show');
+               var $buttonHide = document.getElementById('hide');
+               var $menu = document.getElementById('MainMenu');
+               var $body = document.querySelector('body');
+               var body = new Hammer($body);
+
+               function showMenu(e) {
+                  // body...
+                  e.preventDefault();
+                  $menu.classList.add('is-active');
+                  $buttonShow.classList.remove('is-active');
+                  $buttonHide.classList.add('is-active');
+               }
+               function hideMenu(e) {
+                  // body...
+                  e.preventDefault();
+                  $menu.classList.remove('is-active');
+                  $buttonHide.classList.remove('is-active');
+                  $buttonShow.classList.add('is-active');
+               }
+               body.on('panright', showMenu);
+               body.on('panleft', hideMenu);
+               $buttonShow.addEventListener('click', showMenu);
+               $buttonHide.addEventListener('click', hideMenu);
+            }
          });
       </script>
 	</body>

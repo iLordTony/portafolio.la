@@ -60,6 +60,21 @@ body
    background-size cover
    text-align center
    padding 1.2em 0
+   &-button
+      background white
+      border none
+      border-radius 50%
+      position fixed
+      top 1em
+      right 1em
+      width 40px
+      line-height 40px
+      outline 0
+      height 40px
+      font-size 1.2em
+      z-index 3
+      display none
+      box-shadow 2px 2px 2px 0px rgba(110, 110, 110, 0.5)
 
 .Header-image
    border-radius 50%
@@ -84,6 +99,8 @@ body
    text-align center
    position fixed
    top 0
+   z-index 3
+   box-shadow 4px 4px 10px 0 rgba(50, 50, 50, 0.5)
 
 .MainMenu-item
    display inline-block
@@ -159,3 +176,17 @@ body
          width 90%
       &-textArea
          width 90%
+   .Header
+      margin-top 0
+      &-button
+         &.is-active
+            display block
+   .MainMenu
+      height auto
+      left -205px
+      width 200px
+      transition 0.3s
+      &.is-active
+         left 0
+      &-item
+         display block
